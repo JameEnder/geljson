@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GelJSON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="src/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="flex gap-8 m-12">
+    <div id="json" type="text" class="w-[40%] h-[80vh] border m-auto"></div>
+
+    <div class="flex flex-col items-center justify-center gap-4">
+
+      <button id="parse" class="border hover:bg-gray-200 text px-2">Parse</button>
+
+      <div>
+        <input id="pretty" type="checkbox" />
+        <label for="pretty" class="text-sm">Pretty</label>
+      </div>
+      <div>
+        <label for="format" class="text-sm">Format</label>
+        <br>
+        <select id="format" class="border hover:bg-gray-200 p-1 text">
+          <option value="tab">Tab</option>
+          <option value="space-2">2 Spaces</option>
+          <option value="space-4">4 Spaces</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="literal" class="w-[40%] h-[80vh] m-auto border break-all"></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

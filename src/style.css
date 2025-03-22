@@ -16,6 +16,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@media (width <= 48rem /* 768px */) {
+	:root {
+		font-size: 1.25rem;
+	}
+}
+
 select,
 option {
 	font-family: 'Space Mono', monospace;

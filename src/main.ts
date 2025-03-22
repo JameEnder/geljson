@@ -65,13 +65,13 @@ const jsonView = new EditorView({
 		4
 	),
 	parent: document.getElementById('json')!,
-	extensions: [basicSetup, json(), tokyoNightStorm],
+	extensions: [basicSetup, json(), tokyoNightStorm, EditorView.lineWrapping],
 })
 
 const literalView = new EditorView({
 	doc: '',
 	parent: document.getElementById('literal')!,
-	extensions: [basicSetup, tokyoNightStorm],
+	extensions: [basicSetup, tokyoNightStorm, EditorView.lineWrapping],
 })
 
 document.getElementById('parse')!.addEventListener('click', () => {

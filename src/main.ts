@@ -74,10 +74,22 @@ const literalView = new EditorView({
 	extensions: [basicSetup, tokyoNightStorm, EditorView.lineWrapping],
 })
 
-document.getElementById('pretty')!.addEventListener('change', () => {
-	document.getElementById('format-select')!.classList.toggle('hidden')
-	document.getElementById('format-select')!.classList.toggle('flex')
-})
+const toggleFormatSelect = (pretty: boolean) => {
+	console.log('LOL')
+	if (pretty) {
+		document.getElementById('format-select')!.classList.remove('hidden')
+		document.getElementById('format-select')!.classList.add('flex')
+	} else {
+		document.getElementById('format-select')!.classList.add('hidden')
+		document.getElementById('format-select')!.classList.remove('flex')
+	}
+}
+
+const pretty = document.getElementById('pretty') as HTMLInputElement
+
+toggleFormatSelect(pretty.checked)
+
+pretty.addEventListener('change', () => toggleFormatSelect(pretty.checked))
 
 document.getElementById('parse')!.addEventListener('click', () => {
 	try {

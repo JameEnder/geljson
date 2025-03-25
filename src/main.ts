@@ -74,6 +74,11 @@ const literalView = new EditorView({
 	extensions: [basicSetup, tokyoNightStorm, EditorView.lineWrapping],
 })
 
+document.getElementById('pretty')!.addEventListener('change', () => {
+	document.getElementById('format-select')!.classList.toggle('hidden')
+	document.getElementById('format-select')!.classList.toggle('flex')
+})
+
 document.getElementById('parse')!.addEventListener('click', () => {
 	try {
 		const parsed = JSON.parse(jsonView.state.doc.toString())

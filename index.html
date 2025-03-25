@@ -14,25 +14,33 @@
 </head>
 
 <body>
-  <div class="flex flex-col md:flex-row gap-4 md:gap-8 mx-4 my-8 md:m-12">
+  <div class="flex flex-col md:flex-row gap-4 md:gap-4 mx-4 my-8 md:m-12">
     <div id="json" type="text" class="w-[100%] md:w-[40%] h-[40vh] md:h-[80vh] border m-auto"></div>
 
-    <div class="flex flex-col items-center justify-center gap-4">
-
-      <button id="parse" class="border hover:bg-gray-200 text px-2">Parse</button>
-
-      <div>
-        <input id="pretty" type="checkbox" />
-        <label for="pretty" class="text-sm">Pretty</label>
+    <div class="flex flex-col items-center justify-center gap-8">
+      <div class="text-center">
+        <a href="https://github.com/jameender/geljson" target="_blank" class="underline">⭐ on GitHub</a> <br /> <span
+          class="text-xs">(thank you &lt;3)</span>
       </div>
-      <div>
-        <label for="format" class="text-sm">Format</label>
-        <br>
-        <select id="format" class="border hover:bg-gray-200 p-1 text">
-          <option value="tab">Tab</option>
-          <option value="space-2">2 Spaces</option>
-          <option value="space-4">4 Spaces</option>
-        </select>
+
+
+      <button id="parse" class="border hover:bg-gray-200/10 text px-2">Transform</button>
+
+      <div class="flex flex-col items-center justify-center md:h-0 gap-4">
+        <div>
+
+          <input id="pretty" type="checkbox" />
+          <label for="pretty" class="text-sm">Pretty</label>
+        </div>
+        <div id="format-select" class="hidden gap-2 items-center md:flex-col md:h-0">
+          <label for="format" class="text-sm">Format</label>
+          <br>
+          <select id="format" class="border hover:bg-gray-200/10 p-1 text">
+            <option value="tab">Tab</option>
+            <option value="space-2">2 Spaces</option>
+            <option value="space-4">4 Spaces</option>
+          </select>
+        </div>
       </div>
     </div>
 

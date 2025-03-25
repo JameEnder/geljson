@@ -75,7 +75,6 @@ const literalView = new EditorView({
 })
 
 const toggleFormatSelect = (pretty: boolean) => {
-	console.log('LOL')
 	if (pretty) {
 		document.getElementById('format-select')!.classList.remove('hidden')
 		document.getElementById('format-select')!.classList.add('flex')
